@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* fonts  */
+@font-face {
+   font-family: GothamBook;
+   src: url(./assets/fonts/GothamBook.otf);
+  }
+
+:root{
+   --black  : #060606;
+   --gray   : #57544D;
+   --brown  : #5D200D;
+   --orange : #BB4A20;
+   --maroon : #A02305;
+   --peach  : #D39765;
+   --pale   : #DBC6AB;
+   --eli    : #6C828F;
+
+}
