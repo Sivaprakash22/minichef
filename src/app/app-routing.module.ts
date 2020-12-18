@@ -15,15 +15,35 @@ const routes: Routes = [
   {
     path: '',
     component : HomePageComponent
-  },
+  }
+  ,
   {
     path: 'login',
     component : LoginComponent
-  },
+  }
+  ,
   {
     path: 'sign-up',
     component : SignupComponent
   }
+  ,
+  {
+    path: 'food/:id',
+    component : RecipeComponent
+  }
+  ,
+  {
+   path : "categories/:food",
+   component : FoodsComponent
+  },
+  {
+    path : "addrecipe",
+    component : AddRecipeComponent
+   },
+   {
+    path : "user",
+    component : UserComponent
+   }
   
 ]
 

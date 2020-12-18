@@ -1,18 +1,40 @@
+<div class="nav" [ngClass]="{'nav-color' : color ,'nav-colors' : !color }">
+  <div id="logo"></div>
+  <input id="check-box" type="checkbox" />
+  <label for="check-box" id="menu-img">
+    <i class="fas fa-bars"></i>
+  </label>
+  <ul id="nav-items">
+    <li id="nav-item"><a routerLink="/">Home</a></li>
+    <li id="nav-item"><a routerLink="/categories">Categories</a></li>
 
-<div class="nav ">
-     <div id="logo"></div>
-     <input id="check-box" type="checkbox" />
-        <label for="check-box" id="menu-img">
-            <i class="fas fa-bars"></i>
-        </label>
-      <ul id="nav-items">
-          <li id="nav-item"><a href="/">Home</a></li>
-          <li id="nav-item"><a href="/categories">Categories</a></li>
-          <li id="nav-item"><a href="/login">Login</a></li>
-          <li id="nav-item"><a href="/sign-up" class="btn">Sign up</a></li>
-          <input id="check-box" type="checkbox" />
-          <label for="check-box" id="close-menu">
-            <i class="far fa-times-circle"></i>
-          </label>
-      </ul>
+
+
+
+
+    <div *ngIf="user; else elseB">
+      <li id="nav-item"><a (click)="logout();" >Log out</a></li>
+    </div>
+    <ng-template #elseB>
+      <li id="nav-item">
+        <a routerLink="/login">Login</a>
+      </li></ng-template>
+
+
+
+
+    <div *ngIf="user; else elseBlock">
+      <li id="nav-item"><a routerLink="/user" class="btn">{{user}}</a></li>
+    </div>
+    <ng-template #elseBlock>
+      <li id="nav-item">
+        <a routerLink="/sign-up" class="btn">Sign up</a>
+      </li></ng-template>
+
+
+    <input id="check-box" type="checkbox" />
+    <label for="check-box" id="close-menu">
+      <i class="far fa-times-circle"></i>
+    </label>
+  </ul>
 </div>

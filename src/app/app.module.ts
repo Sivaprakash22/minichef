@@ -16,6 +16,10 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms'
+import { CookieService} from 'ngx-cookie-service'
+
+
 
 
 @NgModule({
@@ -38,9 +42,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

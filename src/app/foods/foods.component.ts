@@ -1,6 +1,7 @@
-import { flatten } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {Router} from "@angular/router"
+import { ApicallService } from '../apicall.service'
 @Component({
   selector: 'app-foods',
   templateUrl: './foods.component.html',
@@ -8,17 +9,27 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class FoodsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,private api: ApicallService) { }
 
+  name: string;
+  foods: any;
   ngOnInit(): void {
+
+      this.name = String((this.router.url).split('/')[2]);
+      this.name = this.name.replace('-',' ')
+      this.api.getCatRecipe(this.name).subscribe((data)=>{
+        this.foods = data
+      });
+
   }
+   
 
   customOptions: OwlOptions = {
     loop: true,
-    dots : true,
+    dots : false,
     mouseDrag: true,
     autoplay:true,
-    autoplayTimeout : 200,
+    autoplayTimeout : 100,
     touchDrag: false,
     pullDrag: false,
     navSpeed: 700,
@@ -39,4 +50,5 @@ export class FoodsComponent implements OnInit {
     },
     nav: true
   }
+
 }

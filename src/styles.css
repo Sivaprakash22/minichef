@@ -43,6 +43,9 @@ p{
 .nav-color {
    background-color: var(--gray);
  }
+ .nav-colors{
+   background-color: transparent;
+ }
  .mg-r
  {
   margin-right: 1.2rem;
@@ -51,6 +54,15 @@ p{
  .mg-l
  {
   margin-left: 1.2rem;
+ }
+ .rm-br
+ {
+    border: none;
+    padding: 10px 20px !important;
+    cursor: pointer;
+ }
+ .rm-br:focus{
+    outline: none;
  }
 
  .btn

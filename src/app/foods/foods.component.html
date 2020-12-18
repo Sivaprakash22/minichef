@@ -1,80 +1,37 @@
+<app-navbar></app-navbar>
 <div class="container">
   <div id="food">
-    <h1 class="big-heading">North Indian</h1>
-    <owl-carousel-o [options]="customOptions">
+    <h1 class="big-heading">{{name}}</h1>
+  <owl-carousel-o [options]="customOptions">
+
+     {{foods}}
+    <ng-container *ngFor="let food of foods">
       <ng-template carouselSlide>
         <div class="food-card">
           <div id="card-image">
             <img
-              src="https://www.newideafood.com.au/media/7399/cda1f942-fd34-4c42-837f-a55b3e3e26f0.jpg?width=606&height=0&mode=crop&center=0.5,0.5"
+              src="{{food.picture}}"
               alt=""
             />
           </div>
           <div id="recipe-content">
             <h3 id="recipe-name">
-              Tomato chilli pasta <i class="far fa-stop-circle green"></i>
+              {{food.name}}<i class="far fa-stop-circle green"></i>
             </h3>
             <p class="description">
-              This is a simple, 30-minute pasta sauce that tastes like a
-              restaurant creation and is an easy way to jazz up your pasta
-              leftovers
+              {{food.description}}
             </p>
 
             <div class="btn-holder">
-              <a href="/" class="btn ran-btn">View</a>
+              <a href="food/{{food.item_id}}" class="btn ran-btn">View</a>
             </div>
           </div>
         </div>
       </ng-template>
-      <ng-template carouselSlide>
-        <div class="food-card">
-          <div id="card-image">
-            <img
-              src="https://www.newideafood.com.au/media/7399/cda1f942-fd34-4c42-837f-a55b3e3e26f0.jpg?width=606&height=0&mode=crop&center=0.5,0.5"
-              alt=""
-            />
-          </div>
-          <div id="recipe-content">
-            <h3 id="recipe-name">
-              Tomato chilli <i class="far fa-stop-circle green"></i>
-            </h3>
-            <p class="description">
-              This is a simple, 30-minute pasta sauce that tastes like a
-              restaurant creation and is an easy way to jazz up your pasta
-              leftovers
-            </p>
+    </ng-container>
+    
+   
 
-            <div class="btn-holder">
-              <a href="/" class="btn ran-btn">View</a>
-            </div>
-          </div>
-        </div>
-      </ng-template>
-
-      <ng-template carouselSlide>
-        <div class="food-card">
-          <div id="card-image">
-            <img
-              src="https://www.newideafood.com.au/media/7399/cda1f942-fd34-4c42-837f-a55b3e3e26f0.jpg?width=606&height=0&mode=crop&center=0.5,0.5"
-              alt=""
-            />
-          </div>
-          <div id="recipe-content">
-            <h3 id="recipe-name">
-             pasta <i class="far fa-stop-circle green"></i>
-            </h3>
-            <p class="description">
-              This is a simple, 30-minute pasta sauce that tastes like a
-              restaurant creation and is an easy way to jazz up your pasta
-              leftovers
-            </p>
-
-            <div class="btn-holder">
-              <a href="/" class="btn ran-btn">View</a>
-            </div>
-          </div>
-        </div>
-      </ng-template>
     </owl-carousel-o>
   </div>
 </div>

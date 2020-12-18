@@ -16,8 +16,9 @@ export class RandomComponent implements OnInit {
 }
 recipe: any;
 type: any
-ngOnInit() {
-  this.api.setData().subscribe((data)=>{
+
+ngOnInit(){
+  this.api.getRandomData().subscribe((data)=>{
     this.recipe = data
   if((this.recipe.type).toLowerCase()==='veg')
    {
@@ -29,9 +30,9 @@ ngOnInit() {
   }
   })
 
- 
-
 } 
+
+
 
 
 

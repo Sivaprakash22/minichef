@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container">
   <div id="recipe-holder">
     <div id="recipe">
@@ -15,7 +16,7 @@
       <div id="recipe">
         <div class="recipe-btn-holder">
           <a href={{recipe.video}} class="btn mg-r"><i class="far fa-play-circle"></i> Watch Video</a>
-          <button (click)='shareBtn()' class=" btn-color"><i class="fas fa-share-alt"></i></button>
+          <button  class=" btn-color"><i class="fas fa-share-alt"></i></button>
         </div>
       <div class="ingredients">
           <h3 class="small-heading">Ingredients</h3>
@@ -29,8 +30,6 @@
           <div *ngFor='let i of recipe.steps'>
             <li><p><span class="point"></span>{{i}}</p></li>
           </div>
-           
-            
         </ul>
     </div>
   </div>  

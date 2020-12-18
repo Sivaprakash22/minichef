@@ -15,8 +15,8 @@
                 <p class="description"><span class="inc">Ingredients :</span>{{recipe.ingredients}}</p>
                 <div class="btn-holder">
                    
-                    <a href="/res" class="btn ran-btn">Try Now</a>
-                    <a href="/" class="btn ran-btn">Next</a>
+                    <a href="food/{{recipe.item_id}}" class="btn ran-btn">Try Now</a>
+                    <button (click)="ngOnInit()" class="btn ran-btn rm-br">Next</button>
                 </div>
             </div>
             

@@ -8,8 +8,8 @@
                 Explore Unlimited Recipes !!
             </h1>
             <div class="serach-holder">
-                <form action="">
-                    <input type="text" name="search" id="search-box" placeholder="Search  Recipes">
+                <form #searchForm="ngForm" (ngSubmit)="search(searchForm);" >
+                    <input type="text" name="search" id="search-box" placeholder="Search  Recipes" ngModel>
                     <button type="submit" id="search-btn">
                     <i class="fas fa-search"></i>
                     </button>
