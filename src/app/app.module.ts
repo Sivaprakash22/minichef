@@ -17,7 +17,8 @@ import { LoginComponent } from './login/login.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms'
-import { CookieService} from 'ngx-cookie-service'
+import { CookieService} from 'ngx-cookie-service';
+import { FooterComponent } from './footer/footer.component'
 
 
 
@@ -36,6 +37,7 @@ import { CookieService} from 'ngx-cookie-service'
     SignupComponent,
     LoginComponent,
     AddRecipeComponent,
+    FooterComponent,
     
   ],
   imports: [

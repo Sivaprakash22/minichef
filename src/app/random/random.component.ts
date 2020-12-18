@@ -15,11 +15,13 @@ export class RandomComponent implements OnInit {
 
 }
 recipe: any;
-type: any
+type: any;
 
 ngOnInit(){
   this.api.getRandomData().subscribe((data)=>{
     this.recipe = data
+  
+    
   if((this.recipe.type).toLowerCase()==='veg')
    {
     this.type = 'green';
