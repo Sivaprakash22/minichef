@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { ApicallService } from '../apicall.service'
+// import { HttpClient } from '@angular/common/http';
+
+
 
 @Component({
   selector: 'app-random',
@@ -7,9 +11,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+ constructor(private api: ApicallService){
 
 }
+recipe: any;
+type: any
+ngOnInit() {
+  this.api.setData().subscribe((data)=>{
+    this.recipe = data
+  if((this.recipe.type).toLowerCase()==='veg')
+   {
+    this.type = 'green';
+   }
+  else
+  {
+    this.type = 'red';
+  }
+  })
+
+ 
+
+} 
+
+
+
+
+  
+  
+
+}
+

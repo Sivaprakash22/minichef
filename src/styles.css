@@ -46,8 +46,13 @@ p{
  .mg-r
  {
   margin-right: 1.2rem;
-
  }
+
+ .mg-l
+ {
+  margin-left: 1.2rem;
+ }
+
  .btn
 {
   position: relative;

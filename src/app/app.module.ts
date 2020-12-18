@@ -9,6 +9,13 @@ import { CategoriesComponent } from './categories/categories.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeComponent } from './recipe/recipe.component';
+import { UserComponent } from './user/user.component';
+import { FoodsComponent } from './foods/foods.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,11 +27,18 @@ import { RecipeComponent } from './recipe/recipe.component';
     CategoriesComponent,
     HomePageComponent,
     RecipeComponent,
+    UserComponent,
+    FoodsComponent,
+    SignupComponent,
+    LoginComponent,
+    AddRecipeComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
