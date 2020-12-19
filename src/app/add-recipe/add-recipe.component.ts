@@ -28,7 +28,7 @@ export class AddRecipeComponent implements OnInit {
     this.newRecipe.steps  =  addRecipeForm.value.steps;
     this.newRecipe.description  =  addRecipeForm.value.description;
 
-    this.api.addNewRecipe(this.newRecipe).subscribe(data=>{
+    this.api.addNewRecipe(this.newRecipe).subscribe(data=>{ 
       alert('Recipe Added')
       this.router.navigate(['/user']);
     },(err=>{
