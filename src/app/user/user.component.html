@@ -10,23 +10,35 @@
             <ul class="recipe-list">
 
 
-                <div *ngFor='let myRecipe of myRecipes'>
+                <div *ngIf="myRecipes==null; else elseR">
                     <li class="recipe-item">
                         <div class="box">
-                            <div class="box-img">
-                                <img src={{myRecipe.picture}} alt="">
+                            <p>No Recipes added.</p>
+                        </div></li>
+                  </div>
+                  <ng-template #elseR>
+                    <div *ngFor='let myRecipe of myRecipes'>
+                        <li class="recipe-item">
+                            <div class="box">
+                                <div class="box-img">
+                                    <img src={{myRecipe.picture}} alt="">
+                                </div>
+                                <div class="box-text">
+                                    <h3>{{myRecipe.name}}<i class="far fa-stop-circle green"></i></h3>
+                                </div>
+                                <div class="box-btn">
+                                    <a routerLink="/food/{{myRecipe.item_id}}" >View</a>
+                                </div>
+                                <div></div>
+                                <div></div>
                             </div>
-                            <div class="box-text">
-                                <h3>{{myRecipe.name}}<i class="far fa-stop-circle green"></i></h3>
-                            </div>
-                            <div class="box-btn">
-                                <a routerLink="/food/{{myRecipe.item_id}}" >View</a>
-                            </div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                </div>
+                        </li>
+                    </div>
+                 </ng-template>
+              
+
+
+            
                 
                
             </ul>

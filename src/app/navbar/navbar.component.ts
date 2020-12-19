@@ -24,7 +24,14 @@ export class NavbarComponent implements OnInit {
   logout()
   {
     this.cookies.deleteAll();
-    this.router.navigate(['/']);
+    if((this.router.url)==='/')
+    {
+      window.location.reload();
+    }
+    else{
+      this.router.navigate(['/']);
+    }
+    
   }
 
 }

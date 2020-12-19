@@ -12,13 +12,14 @@
   }
 
   #logo {
-    background-color: var(--orange);
+   
     margin-left: 25px;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 5.5rem;
+    height: 5rem;
     float: left;
     display: block;
   }
+  
 
   #nav-items {
     transition: ease-out;
@@ -85,10 +86,9 @@
         padding: 25px 0px;
       }
       #logo {
-        background-color: var(--orange);
-        margin-left: 25px;
-        width: 3.5rem;
-        height: 3.5rem;
+        margin-left: 8rem;
+        width: 6.5rem;
+        height: 6rem;
         float: left;
         display: block;
       }
@@ -127,13 +127,14 @@
 @media screen and (min-width: 1200px) {
 
     .nav {
-        padding: 25px 0px;
+        padding:25px 0px;
       }
       #logo {
-        background-color: var(--orange);
-        margin-left: 12rem;
-        width: 3.5rem;
-        height: 3.5rem;
+        position: absolute;
+        bottom :30;
+        margin-left: 10rem;
+        width: 7rem;
+        height: 5rem;
         float: left;
         display: block;
       }
