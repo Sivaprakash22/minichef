@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ApicallService } from '../apicall.service'
 import { CookieService} from 'ngx-cookie-service';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-add-recipe',
@@ -10,7 +11,7 @@ import { CookieService} from 'ngx-cookie-service';
 })
 export class AddRecipeComponent implements OnInit {
 
-  constructor(private api: ApicallService,private cookies: CookieService) { }
+  constructor(private api: ApicallService,private cookies: CookieService,private router: Router) { }
 
   newRecipe:any = {};
   msg:any = {};
@@ -29,6 +30,7 @@ export class AddRecipeComponent implements OnInit {
 
     this.api.addNewRecipe(this.newRecipe).subscribe(data=>{
       alert('Recipe Added')
+      this.router.navigate(['/user']);
     },(err=>{
       alert('Already Exists')
     }))
